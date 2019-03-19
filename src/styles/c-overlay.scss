@@ -2,8 +2,11 @@
 
 /**** Overlay ****/
 
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
 .c-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,17 +43,19 @@
         }
     }
 
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
     &__close {
         position: absolute;
-        top: $indent;
-        right: $indent--l;
+        top: -$indent * 5;
+        right: 0;
         width: 3rem;
         height: 3rem;
         cursor: pointer;
-
-        @media #{$breakpoint--large-above} {
-            top: $indent--l;
-        }
 
         &:before,
         &:after {

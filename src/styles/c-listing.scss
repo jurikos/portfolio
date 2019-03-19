@@ -5,8 +5,8 @@
 .c-listing {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
     line-height: $golden-ratio;
+    color: $brand-color--tertiary;
 
     @media #{$breakpoint--large-above} {
         margin-top: -$indent--l;

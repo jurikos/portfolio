@@ -7,6 +7,7 @@
         display: block;
         padding: $indent--l 0;
         border-top: .1rem solid $brand-color--primary;
+        color: $brand-color--tertiary;
 
         .c-contacts__item:last-child & {
             border-bottom: .1rem solid $brand-color--primary;
