@@ -1,0 +1,31 @@
+@import '_variables.scss';
+
+/**** Layout ****/
+
+%fullwidth {
+    flex-basis: 100%;
+    min-width: 100%;
+}
+
+.l-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: $layout-padding;
+
+    @media #{$breakpoint--large-above} {
+        margin: auto;
+        padding: $layout-padding--large;
+        max-width: $layout-width--large;
+    }
+
+    @media #{$breakpoint--x-large-above} {
+        max-width: $layout-width--x-large;
+    }
+}
+
+.l-header,
+.l-main {
+    @extend %fullwidth;
+}

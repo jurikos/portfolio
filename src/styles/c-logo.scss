@@ -1,0 +1,28 @@
+@import '_variables.scss';
+
+/**** Logo ****/
+
+.c-logo {
+    margin: auto;
+    width: 16rem;
+    cursor: pointer;
+    color: $logo-color;
+
+    @media #{$breakpoint--medium-above} {
+        width: 32rem;
+    }
+
+    &__ellipse,
+    &__line {
+        .c-logo:hover & {
+            stroke-width: 2;
+            stroke-dasharray: 3319;
+            stroke-dashoffset: 3319;
+            animation-name: animation--draw;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+    }
+}

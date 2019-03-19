@@ -1,0 +1,136 @@
+@import '_variables.scss';
+
+/**** Reset ****/
+
+@-ms-viewport {
+    width: device-width;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+::selection {
+    background: $selection-background;
+    color: $selection-color;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    line-height: 1.15;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-weight: $font-weight--normal;
+    font-size: 2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+    color: $body-color;
+    line-height: 1.5;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-weight: $font-weight--bold;
+}
+
+main,
+li {
+    display: block;
+}
+
+a,
+button {
+    color: inherit;
+    cursor: pointer;
+    transition: $transition-duration;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/**** SVG ****/
+
+svg {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg use {
+    pointer-events: none
+}
+
+@import 'h-helper.scss';
+@import 'l-layout.scss';
+@import 'c-icon.scss';
+@import 'c-overlay.scss';
+
+@import 'c-logo.scss';
+@import 'c-videobg.scss';
+@import 'c-content.scss';
+@import 'c-button.scss';
+@import 'c-listing.scss';
+@import 'c-contacts.scss';
+
+@import 'v-animation.scss';

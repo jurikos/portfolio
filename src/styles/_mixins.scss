@@ -1,0 +1,29 @@
+/**** iOS Input Reset ****/
+
+@mixin ios-reset() {
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+/**** Placeholder ****/
+
+@mixin placeholder($color) {
+    color: $color;
+    text-overflow: ellipsis;
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+@mixin placeholder-focus() {
+    opacity: 0;
+}
+
+/**** Button Reset ****/
+
+@mixin button-reset() {
+    padding: 0;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+}

@@ -1,0 +1,13 @@
+@import '_variables.scss';
+
+/**** Helpers ****/
+
+.h-hidden {
+    display: none !important;
+}
+
+.h-overflow {
+    &--hidden {
+        overflow: hidden;
+    }
+}

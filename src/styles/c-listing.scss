@@ -1,0 +1,46 @@
+@import '_variables.scss';
+
+/**** Listing ****/
+
+.c-listing {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    line-height: $golden-ratio;
+
+    @media #{$breakpoint--large-above} {
+        margin-top: -$indent--l;
+        margin-right: -$indent--l;
+        margin-left: -$indent--l;
+        width: 92rem;
+    }
+
+    &__col {
+        flex-basis: 100%;
+        min-width: 100%;
+        padding-top: $indent--l;
+
+        @media #{$breakpoint--medium-above} {
+            flex-basis: 50%;
+            min-width: 50%;
+            padding-right: $indent--l;
+            padding-left: $indent--l;
+        }
+
+        @media #{$breakpoint--large-above} {
+            flex-basis: 25%;
+            min-width: 25%;
+        }
+    }
+
+    &__list {
+        padding: $indent 0 0;
+        font-family: $font-family--alternate;
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+        padding: $indent--l 0 0;
+        border-top: .1rem solid $listing-border-color;
+    }
+}

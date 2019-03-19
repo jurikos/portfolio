@@ -1,0 +1,85 @@
+@import '_variables.scss';
+
+/**** Overlay ****/
+
+.c-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $overlay-background;
+    z-index: 9999;
+    animation: animation--fadein $transition-duration;
+
+    &.is-visible {
+        display: block;
+    }
+
+    &__inner {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+    }
+
+    &__content {
+        margin: 0 $indent--l;
+        padding: $indent--l;
+        max-height: 80vh;
+        background: $overlay-content-background;
+        border-radius: .3rem;
+        color: $overlay-content-color;
+        overflow: auto;
+
+        @media #{$breakpoint--large-above} {
+            margin: 0;
+            padding: $indent--xl;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: $indent;
+        right: $indent--l;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+
+        @media #{$breakpoint--large-above} {
+            top: $indent--l;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -.1rem;
+            width: .2rem;
+            height: 100%;
+            background: $overlay-close-background;
+            transition: $transition-duration;
+        }
+
+        &:before {
+            transform: rotate(45deg)
+        }
+
+        &:after {
+            transform: rotate(-45deg)
+        }
+
+        &:hover {
+            .is-not-touch & {
+                &:before,
+                &:after {
+                    background: $overlay-close-background--hover;
+                }
+            }
+        }
+    }
+}

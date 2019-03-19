@@ -1,0 +1,43 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+/**** Breakpoints ****/
+
+$breakpoint--xl-large-above: "only screen and (min-width: 1600px)" !default;
+$breakpoint--x-large-above:  "only screen and (min-width: 1200px)" !default;
+$breakpoint--large-above:    "only screen and (min-width: 992px)"  !default;
+$breakpoint--medium-above:   "only screen and (min-width: 768px)"  !default;
+
+/**** Golden Ratio ****/
+
+$golden-ratio: 1.618;
+
+/**** Typography ****/
+
+$font-family: 'Titillium Web', sans-serif;
+$font-family--alternate: 'Cutive Mono', monospace;
+
+$font-weight--normal: 400;
+$font-weight--bold: 700;
+
+/**** Indent ****/
+
+$indent: .8rem; // 8px
+$indent--l: $indent * 2; // 16px
+$indent--xl: $indent--l * 2; // 32px
+
+/**** Transitions ****/
+
+$transition-duration: .2s;
+
+/**** Layout ****/
+
+$layout-padding: $indent--l;
+$layout-padding--large: $indent--xl;
+
+$layout-width--large: 102.4rem;
+$layout-width--x-large: 180rem;
+
+/**** Icon ****/
+
+$icon-size: 1.6rem;

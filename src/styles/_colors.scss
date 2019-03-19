@@ -1,0 +1,52 @@
+/**** Colors | http://chir.ag/projects/name-that-color ****/
+
+$color--black: #000;
+$color--white: #fff;
+$color--gold: #ffd700;
+
+/**** Brand Colors ****/
+
+$brand-color--primary: $color--gold;
+$brand-color--secondary: $color--white;
+$brand-color--tertiary: $color--black;
+
+/**** Global ****/
+
+$body-color: $brand-color--secondary;
+
+$link-color: $brand-color--primary;
+
+$color-placeholder: lighten($brand-color--primary, 80);
+
+$selection-background: $brand-color--primary;
+$selection-color: $brand-color--secondary;
+
+$video-overlay-background: $brand-color--tertiary;
+
+$logo-color: $brand-color--secondary;
+
+/**** Button ****/
+
+$button-background--primary: $brand-color--primary;
+$button-border--primary: $brand-color--primary;
+$button-color--primary: $brand-color--tertiary;
+
+$button-border--secondary: $brand-color--secondary;
+$button-background--secondary: $brand-color--secondary;
+$button-hover--secondary: $brand-color--tertiary;
+
+/**** Overlay ****/
+
+$overlay-background: rgba(black, 0.8);
+$overlay-close-background: $brand-color--secondary;
+$overlay-close-background--hover: $brand-color--primary;
+$overlay-content-background: $brand-color--secondary;
+$overlay-content-color: $brand-color--tertiary;
+
+/**** Heading ****/
+
+$heading-border-color: $brand-color--primary;
+
+/**** Listing ****/
+
+$listing-border-color: $brand-color--primary;
