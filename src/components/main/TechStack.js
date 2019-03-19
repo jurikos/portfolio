@@ -9,7 +9,8 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : '-50%',
     overflow              : 'auto',
-    maxHeight             : '80%',
+    maxWidth              : '80%',
+    maxHeight             : '90%',
     transform             : 'translate(-50%, -50%)'
   }
 };
