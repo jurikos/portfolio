@@ -5,6 +5,27 @@ import TechStack from './main/TechStack';
 import ContactMe from './main/ContactMe';
 
 class Main extends Component {
+  fetchApi(url, localUrl = '/content.json') {
+    fetch(url)
+      .then(this.handleErrors)
+      .then(res => res.json())
+      .then(json => {
+        const stringifiedJson = JSON.stringify(json);
+
+        sessionStorage.setItem(url, stringifiedJson);
+
+        this.setState({
+          content: JSON.parse(stringifiedJson)
+        });
+
+        return json;
+      })
+      .catch(error => {
+        console.error(error);
+        this.fetchApi(localUrl);
+      });
+  }
+
   handleErrors(response) {
     if (!response.ok) {
       throw Error(response.statusText);
@@ -27,21 +48,7 @@ class Main extends Component {
     const cached = sessionStorage.getItem(url);
 
     if (!cached) {
-      fetch(url)
-        .then(this.handleErrors)
-        .then(res => res.json())
-        .then(json => {
-          const stringifiedJson = JSON.stringify(json)
-
-          sessionStorage.setItem(url, stringifiedJson);
-
-          this.setState({
-            content: JSON.parse(stringifiedJson)
-          });
-
-          return json;
-        })
-        .catch(error => console.error(error));
+      this.fetchApi(url);
     } else {
       this.setState({
         content: JSON.parse(cached)
@@ -53,12 +60,12 @@ class Main extends Component {
     const content = this.state.content ? this.state.content.summary : null;
 
     return (
-      <main className="l-main" data-role="main">
-        <div className="c-content">
-          <h1 className="c-content__heading v-animation v-animation--slide-in-down">Frontend Developer</h1>
-          {content ? <article className="c-content__txt v-animation v-animation--fade-in-up"
+      <main className='l-main' data-role='main'>
+        <div className='c-content'>
+          <h1 className='c-content__heading v-animation v-animation--slide-in-down'>Frontend Developer</h1>
+          {content ? <article className='c-content__txt v-animation v-animation--fade-in-up'
                               dangerouslySetInnerHTML={{ __html: content }} /> : <Loading />}
-          <div className="c-content__cta">
+          <div className='c-content__cta'>
             <TechStack />
             <ContactMe />
           </div>

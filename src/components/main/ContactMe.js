@@ -39,28 +39,28 @@ class ContactMe extends Component {
     return (
       <React.Fragment>
         <button onClick={this.openModal}
-                className="c-button c-button--primary v-animation v-animation--slide-in-right">
+                className='c-button c-button--primary v-animation v-animation--slide-in-right'>
           Contact Me
         </button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
           style={customStyles}
-          contentLabel="Contact Me"
-          overlayClassName="c-overlay v-animation v-animation--fade-in"
+          contentLabel='Contact Me'
+          overlayClassName='c-overlay v-animation v-animation--fade-in'
         >
           <button className='c-overlay__button' onClick={this.closeModal}>
             <span className='c-overlay__close js-overlay-close' />
           </button>
-          <ul className="c-contacts v-animation v-animation--zoom-in">
-            <li className="c-contacts__item">
-              <a className="c-contacts__link js-antispam-link" href='mailto:juri.kostjunin@gmail.com'>
+          <ul className='c-contacts v-animation v-animation--zoom-in'>
+            <li className='c-contacts__item'>
+              <a className='c-contacts__link js-antispam-link' href='mailto:juri.kostjunin@gmail.com'>
                 juri.kostjunin@gmail.com
               </a>
             </li>
-            <li className="c-contacts__item">
-              <a className="c-contacts__link" href="https://www.linkedin.com/in/jurikos/" rel="noopener noreferrer"
-                 target="_blank">
+            <li className='c-contacts__item'>
+              <a className='c-contacts__link' href='https://www.linkedin.com/in/jurikos/' rel='noopener noreferrer'
+                 target='_blank'>
                 linkedin.com/in/jurikos
               </a>
             </li>
