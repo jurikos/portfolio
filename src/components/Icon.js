@@ -1,4 +1,5 @@
 import React from 'react';
+
 const files = require.context('!svg-sprite-loader!../images/svg', false, /.*\.svg$/);
 files.keys().forEach(files);
 

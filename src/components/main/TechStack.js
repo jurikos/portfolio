@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
+import Icon from '../Icon';
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -58,103 +60,90 @@ class TechStack extends Component {
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>Javascript</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='react'></i> React</li>
-                <li><i data-svg='angular'></i> Angular</li>
-                <li><i data-svg='vue'></i> Vue.js</li>
-                <li><i data-svg='typescript'></i> TypeScript</li>
-                <li><i data-svg='jquery'></i> jQuery</li>
-                <li><i data-svg='html5'></i> Canvas</li>
+                <li><Icon name='javascript' /> ES5</li>
+                <li><Icon name='javascript' /> ES6</li>
+                <li><Icon name='react' /> React</li>
+                <li><Icon name='react' /> React Native</li>
+                <li><Icon name='redux' /> Redux</li>
+                <li><Icon name='typescript' /> TypeScript</li>
+                <li><Icon name='angular' /> Angular</li>
+                <li><Icon name='ionic' /> Ionic</li>
+                <li><Icon name='jquery' /> jQuery</li>
               </ul>
             </div>
             <div className='c-listing__col'>
-              <h2 className='c-listing__heading'>Frameworks</h2>
+              <h2 className='c-listing__heading'>CMS / Backend</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='react'></i> React Native</li>
-                <li><i data-svg='ionic'></i> Ionic</li>
-                <li><i data-svg='bootstrap'></i> Bootstrap</li>
-                <li><i data-svg='foundation'></i> Foundation</li>
-              </ul>
-            </div>
-            <div className='c-listing__col'>
-              <h2 className='c-listing__heading'>Platforms</h2>
-              <ul className='c-listing__list'>
-                <li><i data-svg='magento'></i> Magento</li>
-                <li><i data-svg='wordpress'></i> Wordpress</li>
+                <li><Icon name='magento' /> Magento 2</li>
+                <li><Icon name='magento' /> Magento 1</li>
+                <li><Icon name='wordpress' /> Wordpress</li>
               </ul>
             </div>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>Builders</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='gulp'></i> Gulp</li>
-                <li><i data-svg='grunt'></i> Grunt</li>
-                <li><i data-svg='webpack'></i> Webpack</li>
-              </ul>
-            </div>
-            <div className='c-listing__col'>
-              <h2 className='c-listing__heading'>CSS</h2>
-              <ul className='c-listing__list'>
-                <li><i data-svg='sass'></i> Sass</li>
-                <li><i data-svg='less'></i> Less</li>
-                <li><i data-svg='css'></i> Animation</li>
-              </ul>
-            </div>
-            <div className='c-listing__col'>
-              <h2 className='c-listing__heading'>HTML</h2>
-              <ul className='c-listing__list'>
-                <li><i data-svg='svg'></i> SVG</li>
-                <li><i data-svg='html5'></i> XML</li>
-                <li><i data-svg='bem'></i> BEM</li>
+                <li><Icon name='webpack' /> Webpack</li>
+                <li><Icon name='gulp' /> Gulp</li>
+                <li><Icon name='grunt' /> Grunt</li>
               </ul>
             </div>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>Version Control</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='git'></i> Git</li>
-                <li><i data-svg='mercurial'></i> Mercurial</li>
-                <li><i data-svg='github'></i> GitHub</li>
-                <li><i data-svg='bitbucket'></i> BitBucket</li>
-                <li><i data-svg='sourcetree'></i> SourceTree</li>
+                <li><Icon name='git' /> Git</li>
+                <li><Icon name='mercurial' /> Mercurial</li>
+                <li><Icon name='github' /> GitHub</li>
+                <li><Icon name='bitbucket' /> BitBucket</li>
+                <li><Icon name='sourcetree' /> SourceTree</li>
+              </ul>
+            </div>
+            <div className='c-listing__col'>
+              <h2 className='c-listing__heading'>CSS</h2>
+              <ul className='c-listing__list'>
+                <li><Icon name='sass' /> Sass</li>
+                <li><Icon name='less' /> Less</li>
+                <li><Icon name='css' /> Animation</li>
+              </ul>
+            </div>
+            <div className='c-listing__col'>
+              <h2 className='c-listing__heading'>HTML</h2>
+              <ul className='c-listing__list'>
+                <li><Icon name='svg' /> SVG</li>
+                <li><Icon name='html5' /> XML</li>
+                <li><Icon name='bem' /> BEM</li>
               </ul>
             </div>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>UX / UI</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='sketch'></i> Sketch</li>
-                <li><i data-svg='photoshop'></i> Photoshop</li>
-                <li><i data-svg='illustrator'></i> Illustrator</li>
-                <li><i data-svg='invision'></i> InVision</li>
+                <li><Icon name='invision' /> InVision</li>
+                <li><Icon name='sketch' /> Sketch</li>
+                <li><Icon name='photoshop' /> Photoshop</li>
+                <li><Icon name='illustrator' /> Illustrator</li>
               </ul>
             </div>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>Optimisation</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='security'></i> Security</li>
-                <li><i data-svg='performance'></i> Performance</li>
-                <li><i data-svg='google'></i> SEO</li>
+                <li><Icon name='security' /> Security</li>
+                <li><Icon name='performance' /> Performance</li>
+                <li><Icon name='google' /> SEO</li>
               </ul>
             </div>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>Methodologies</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='board'></i> Agile</li>
-                <li><i data-svg='tasks'></i> Scrum</li>
-                <li><i data-svg='list'></i> Kanban</li>
+                <li><Icon name='board' /> Agile</li>
+                <li><Icon name='tasks' /> Scrum</li>
+                <li><Icon name='list' /> Kanban</li>
               </ul>
             </div>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>PM Tools</h2>
               <ul className='c-listing__list'>
-                <li><i data-svg='jira'></i> Jira</li>
-                <li><i data-svg='confluence'></i> Confluence</li>
-                <li><i data-svg='trello'></i> Trello</li>
-              </ul>
-            </div>
-            <div className='c-listing__col'>
-              <h2 className='c-listing__heading'>Communication</h2>
-              <ul className='c-listing__list'>
-                <li><i data-svg='skype'></i> Skype</li>
-                <li><i data-svg='slack'></i> Slack</li>
-                <li><i data-svg='hipchat'></i> HipChat</li>
+                <li><Icon name='trello' /> Trello</li>
+                <li><Icon name='jira' /> Jira</li>
+                <li><Icon name='confluence' /> Confluence</li>
               </ul>
             </div>
           </div>
