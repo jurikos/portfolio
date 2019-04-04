@@ -25,33 +25,28 @@ class ContactMe extends Component {
       modalIsOpen: false
     };
 
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
+  toggleModal() {
+    this.setState({ modalIsOpen: !this.state.modalIsOpen });
   }
 
   render() {
     return (
       <React.Fragment>
-        <button onClick={this.openModal}
+        <button onClick={this.toggleModal}
                 className='c-button c-button--primary v-animation v-animation--slide-in-right'>
           Contact Me
         </button>
         <Modal
           isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
+          onRequestClose={this.toggleModal}
           style={customStyles}
           contentLabel='Contact Me'
           overlayClassName='c-overlay v-animation v-animation--fade-in'
         >
-          <button className='c-overlay__button' onClick={this.closeModal}>
+          <button className='c-overlay__button' onClick={this.toggleModal}>
             <span className='c-overlay__close js-overlay-close' />
           </button>
           <ul className='c-contacts v-animation v-animation--zoom-in'>
