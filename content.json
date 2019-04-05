@@ -1,6 +1,191 @@
 {
     "summary": "<p>Senior <strong>Frontend Web &amp; Mobile</strong> developer with a strong focus on <strong>performance optimisation</strong>, <strong>clean code</strong> and passion to <strong>UX</strong>. I have 10 Years of professional experience developing high-end <strong>ecommerce</strong> &amp; <strong>corporate websites</strong>, cross-platform <strong>mobile apps</strong>.</p>",
-    "skills": {
-        "javascript": {}
+    "contact": {
+        "email": "juri.kostjunin@gmail.com",
+        "linkedIn": "linkedin.com/in/jurikos"
+    },
+    "techStack": {
+        "javascript": {
+            "es5": {
+                "title": "ES5",
+                "icon": "javascript"
+            },
+            "es6": {
+                "title": "ES6",
+                "icon": "javascript"
+            },
+            "react": {
+                "title": "React",
+                "icon": "react"
+            },
+            "react-native": {
+                "title": "React Native",
+                "icon": "react"
+            },
+            "redux": {
+                "title": "Redux",
+                "icon": "redux"
+            },
+            "typescript": {
+                "title": "Typescript",
+                "icon": "typescript"
+            },
+            "angular": {
+                "title": "Angular",
+                "icon": "angular"
+            },
+            "ionic": {
+                "title": "Iconic",
+                "icon": "ionic"
+            },
+            "jquery": {
+                "title": "jQquery",
+                "icon": "jquery"
+            }
+        },
+        "frontend": {
+            "css": {
+                "title": "CSS",
+                "icon": "css"
+            },
+            "sass": {
+                "title": "SASS",
+                "icon": "sass"
+            },
+            "less": {
+                "title": "LESS",
+                "icon": "less"
+            },
+            "html": {
+                "title": "HTML5",
+                "icon": "html5"
+            },
+            "svg": {
+                "title": "SVG",
+                "icon": "svg"
+            },
+            "bem": {
+                "title": "BEM",
+                "icon": "bem"
+            }
+        },
+        "backend": {
+            "firebase": {
+                "title": "Firebase",
+                "icon": "google"
+            },
+            "magento2": {
+                "title": "Magento 2",
+                "icon": "magento"
+            },
+            "magento1": {
+                "title": "Magento 1",
+                "icon": "magento"
+            },
+            "wordpress": {
+                "title": "Wordpress",
+                "icon": "wordpress"
+            },
+            "php": {
+                "title": "PHP",
+                "icon": "php"
+            }
+        },
+        "builders": {
+            "webpack": {
+                "title": "Webpack",
+                "icon": "webpack"
+            },
+            "gulp": {
+                "title": "Gulp",
+                "icon": "gulp"
+            },
+            "grunt": {
+                "title": "Grunt",
+                "icon": "grunt"
+            }
+        },
+        "versionControl": {
+            "git": {
+                "title": "Git",
+                "icon": "git"
+            },
+            "mercurial": {
+                "title": "Mercurial",
+                "icon": "mercurial"
+            },
+            "github": {
+                "title": "GitHub",
+                "icon": "github"
+            },
+            "bitbucket": {
+                "title": "BitBucket",
+                "icon": "bitbucket"
+            },
+            "sourcetree": {
+                "title": "SourceTree",
+                "icon": "sourcetree"
+            }
+        },
+        "ux": {
+            "invision": {
+                "title": "InVision",
+                "icon": "invision"
+            },
+            "sketch": {
+                "title": "Sketch",
+                "icon": "sketch"
+            },
+            "photoshop": {
+                "title": "Photoshop",
+                "icon": "photoshop"
+            },
+            "illustrator": {
+                "title": "Illustrator",
+                "icon": "illustrator"
+            }
+        },
+        "optimisation": {
+            "security": {
+                "title": "Security",
+                "icon": "security"
+            },
+            "performance": {
+                "title": "Performance",
+                "icon": "performance"
+            },
+            "seo": {
+                "title": "SEO",
+                "icon": "google"
+            }
+        },
+        "methodologies": {
+            "agile": {
+                "title": "Agile",
+                "icon": "board"
+            },
+            "scrum": {
+                "title": "Scrum",
+                "icon": "tasks"
+            },
+            "kanban": {
+                "title": "Kanban",
+                "icon": "list"
+            }
+        },
+        "pm": {
+            "trello": {
+                "title": "Trello",
+                "icon": "trello"
+            },
+            "jira": {
+                "title": "Jira",
+                "icon": "jira"
+            },
+            "confluence": {
+                "title": "Confluence",
+                "icon": "confluence"
+            }
+        }
     }
 }
