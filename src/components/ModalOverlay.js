@@ -35,9 +35,9 @@ class ModalOverlay extends Component {
   render() {
     return (
       <React.Fragment>
-        { this.props.buttonType &&
+        { this.props.showButton &&
           <button onClick={this.toggleModal}
-                  className={`c-button c-button--${this.props.buttonType} v-animation v-animation--${this.props.buttonAnimationType}`}>
+                  className={`c-button c-button--${this.props.buttonType ? this.props.buttonType : 'primary'} v-animation v-animation--${this.props.buttonAnimationType}`}>
             {this.props.title}
           </button>
         }

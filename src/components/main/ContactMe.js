@@ -7,7 +7,7 @@ const ContactMe = (props) => {
   console.log(props);
 
   return (
-    <ModalOverlay title='Contact Me' buttonType='primary' buttonAnimationType='slide-in-right'>
+    <ModalOverlay title='Contact Me' showButton={true} buttonAnimationType='slide-in-right'>
       <ul className='c-contacts v-animation v-animation--zoom-in'>
         <li className='c-contacts__item'>
           <a className='c-contacts__link js-antispam-link' href={`mailto:${props.data.email}`}>
