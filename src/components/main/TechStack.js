@@ -3,10 +3,6 @@ import React from 'react';
 import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
-const modalSettings = {
-  button: 'c-button c-button--secondary v-animation v-animation--slide-in-left'
-}
-
 const TechStack = () => {
   return (
     <ModalOverlay title='Tech Stack' buttonType='secondary' buttonAnimationType='slide-in-left'>

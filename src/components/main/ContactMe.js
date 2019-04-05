@@ -3,21 +3,23 @@ import React from 'react';
 import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
-const ContactMe = (contact) => {
+const ContactMe = (props) => {
+  console.log(props);
+
   return (
     <ModalOverlay title='Contact Me' buttonType='primary' buttonAnimationType='slide-in-right'>
       <ul className='c-contacts v-animation v-animation--zoom-in'>
         <li className='c-contacts__item'>
-          <a className='c-contacts__link js-antispam-link' href={`mailto:${contact.data.email}`}>
+          <a className='c-contacts__link js-antispam-link' href={`mailto:${props.data.email}`}>
             <Icon name='envelope' />
-            {contact.data.email}
+            {props.data.email}
           </a>
         </li>
         <li className='c-contacts__item'>
-          <a className='c-contacts__link' href={`https://www.${contact.data.linkedIn}`} rel='noopener noreferrer'
+          <a className='c-contacts__link' href={`https://www.${props.data.linkedIn}`} rel='noopener noreferrer'
              target='_blank'>
             <Icon name='linkedin' />
-            {contact.data.linkedIn}
+            {props.data.linkedIn}
           </a>
         </li>
       </ul>
