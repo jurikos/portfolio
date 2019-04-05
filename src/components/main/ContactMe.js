@@ -1,54 +1,20 @@
 import React, { Component } from 'react';
-import Modal from 'react-modal';
 
+import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    overflow              : 'visible',
-    transform             : 'translate(-50%, -50%)'
+const modalSettings = {
+  isOpen: false,
+  button: {
+    className: 'c-button c-button--primary v-animation v-animation--slide-in-right',
+    text: 'Contact Me',
   }
-};
-
-Modal.setAppElement('#root');
+}
 
 class ContactMe extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      modalIsOpen: false
-    };
-
-    this.toggleModal = this.toggleModal.bind(this);
-  }
-
-  toggleModal() {
-    this.setState({ modalIsOpen: !this.state.modalIsOpen });
-  }
-
   render() {
     return (
-      <React.Fragment>
-        <button onClick={this.toggleModal}
-                className='c-button c-button--primary v-animation v-animation--slide-in-right'>
-          Contact Me
-        </button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.toggleModal}
-          style={customStyles}
-          contentLabel='Contact Me'
-          overlayClassName='c-overlay v-animation v-animation--fade-in'
-        >
-          <button className='c-overlay__button' onClick={this.toggleModal}>
-            <span className='c-overlay__close js-overlay-close' />
-          </button>
+        <ModalOverlay settings={modalSettings}>
           <ul className='c-contacts v-animation v-animation--zoom-in'>
             <li className='c-contacts__item'>
               <a className='c-contacts__link js-antispam-link' href='mailto:juri.kostjunin@gmail.com'>
@@ -64,8 +30,7 @@ class ContactMe extends Component {
               </a>
             </li>
           </ul>
-        </Modal>
-      </React.Fragment>
+        </ModalOverlay>
     );
   }
 }

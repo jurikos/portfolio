@@ -1,56 +1,20 @@
 import React, { Component } from 'react';
-import Modal from 'react-modal';
 
+import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    overflow              : 'auto',
-    maxWidth              : '80%',
-    maxHeight             : '90%',
-    transform             : 'translate(-50%, -50%)'
+const modalSettings = {
+  isOpen: false,
+  button: {
+    className: 'c-button c-button--secondary v-animation v-animation--slide-in-left',
+    text: 'Tech Stack',
   }
-};
-
-Modal.setAppElement('#root');
+}
 
 class TechStack extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      modalIsOpen: false
-    };
-
-    this.toggleModal = this.toggleModal.bind(this);
-  }
-
-  toggleModal() {
-    this.setState({ modalIsOpen: !this.state.modalIsOpen });
-  }
-
   render() {
     return (
-      <React.Fragment>
-        <button onClick={this.toggleModal}
-                className='c-button c-button--secondary v-animation v-animation--slide-in-left'>
-          Tech Stack
-        </button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.toggleModal}
-          style={customStyles}
-          contentLabel='Tech Stack'
-          overlayClassName='c-overlay v-animation v-animation--fade-in'
-        >
-          <button className='c-overlay__button' onClick={this.toggleModal}>
-            <span className='c-overlay__close js-overlay-close' />
-          </button>
+      <ModalOverlay settings={modalSettings}>
           <div className='c-listing v-animation v-animation--zoom-in'>
             <div className='c-listing__col'>
               <h2 className='c-listing__heading'>Javascript</h2>
@@ -142,8 +106,7 @@ class TechStack extends Component {
               </ul>
             </div>
           </div>
-        </Modal>
-      </React.Fragment>
+      </ModalOverlay>
     );
   }
 }
