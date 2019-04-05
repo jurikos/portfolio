@@ -11,21 +11,21 @@ const modalSettings = {
   }
 }
 
-const ContactMe = () => {
+const ContactMe = (contact) => {
   return (
     <ModalOverlay settings={modalSettings}>
       <ul className='c-contacts v-animation v-animation--zoom-in'>
         <li className='c-contacts__item'>
-          <a className='c-contacts__link js-antispam-link' href='mailto:juri.kostjunin@gmail.com'>
+          <a className='c-contacts__link js-antispam-link' href={`mailto:${contact.data.email}`}>
             <Icon name='envelope' />
-            juri.kostjunin@gmail.com
+            {contact.data.email}
           </a>
         </li>
         <li className='c-contacts__item'>
-          <a className='c-contacts__link' href='https://www.linkedin.com/in/jurikos/' rel='noopener noreferrer'
+          <a className='c-contacts__link' href={`https://www.${contact.data.linkedIn}`} rel='noopener noreferrer'
              target='_blank'>
             <Icon name='linkedin' />
-            linkedin.com/in/jurikos
+            {contact.data.linkedIn}
           </a>
         </li>
       </ul>

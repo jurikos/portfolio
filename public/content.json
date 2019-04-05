@@ -1,5 +1,9 @@
 {
     "summary": "<p>Senior <strong>Frontend Web &amp; Mobile</strong> developer with a strong focus on <strong>performance optimisation</strong>, <strong>clean code</strong> and passion to <strong>UX</strong>. I have 10 Years of professional experience developing high-end <strong>ecommerce</strong> &amp; <strong>corporate websites</strong>, cross-platform <strong>mobile apps</strong>.</p>",
+    "contact": {
+        "email": "juri.kostjunin@gmail.com",
+        "linkedIn": "linkedin.com/in/jurikos"
+    },
     "skills": {
         "javascript": {}
     }

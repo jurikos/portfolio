@@ -57,18 +57,22 @@ class Main extends Component {
   }
 
   render() {
-    const content = this.state.content ? this.state.content.summary : null;
+    const content = this.state.content ? this.state.content : null;
 
     return (
       <main className='l-main' data-role='main'>
         <div className='c-content'>
           <h1 className='c-content__heading v-animation v-animation--slide-in-down'>Frontend Developer</h1>
-          {content ? <article className='c-content__txt v-animation v-animation--fade-in-up'
-                              dangerouslySetInnerHTML={{ __html: content }} /> : <Loading />}
-          <div className='c-content__cta'>
-            <TechStack />
-            <ContactMe />
-          </div>
+          {content ?
+            <React.Fragment>
+              <article className='c-content__txt v-animation v-animation--fade-in-up'
+                       dangerouslySetInnerHTML={{ __html: content.summary }} />
+              <div className='c-content__cta'>
+                <TechStack />
+                <ContactMe data={content.contact} />
+              </div>
+            </React.Fragment>
+            : <Loading />}
         </div>
       </main>
     );
