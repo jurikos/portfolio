@@ -3,17 +3,9 @@ import React from 'react';
 import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
-const modalSettings = {
-  isOpen: false,
-  button: {
-    className: 'c-button c-button--primary v-animation v-animation--slide-in-right',
-    text: 'Contact Me'
-  }
-}
-
 const ContactMe = (contact) => {
   return (
-    <ModalOverlay settings={modalSettings}>
+    <ModalOverlay title='Contact Me' buttonType='primary' buttonAnimationType='slide-in-right'>
       <ul className='c-contacts v-animation v-animation--zoom-in'>
         <li className='c-contacts__item'>
           <a className='c-contacts__link js-antispam-link' href={`mailto:${contact.data.email}`}>

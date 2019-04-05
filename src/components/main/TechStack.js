@@ -4,16 +4,12 @@ import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
 const modalSettings = {
-  isOpen: false,
-  button: {
-    className: 'c-button c-button--secondary v-animation v-animation--slide-in-left',
-    text: 'Tech Stack'
-  }
+  button: 'c-button c-button--secondary v-animation v-animation--slide-in-left'
 }
 
 const TechStack = () => {
   return (
-    <ModalOverlay settings={modalSettings}>
+    <ModalOverlay title='Tech Stack' buttonType='secondary' buttonAnimationType='slide-in-left'>
       <div className='c-listing v-animation v-animation--zoom-in'>
         <div className='c-listing__col'>
           <h2 className='c-listing__heading'>Javascript</h2>

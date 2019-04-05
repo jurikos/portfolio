@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
-const customStyles = {
+const modalStyles = {
   content : {
     top                   : '50%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    overflow              : 'auto',
+    padding               : '2.4rem',
     maxWidth              : '80%',
     maxHeight             : '90%',
     transform             : 'translate(-50%, -50%)'
@@ -22,7 +22,7 @@ class ModalOverlay extends Component {
     super(props);
 
     this.state = {
-      modalIsOpen: this.props.settings.isOpen
+      modalIsOpen: false
     };
 
     this.toggleModal = this.toggleModal.bind(this);
@@ -35,19 +35,20 @@ class ModalOverlay extends Component {
   render() {
     return (
       <React.Fragment>
-        { this.props.settings.button &&
-          <button onClick={this.toggleModal} className={this.props.settings.button.className}>
-            {this.props.settings.button.text}
+        { this.props.buttonType &&
+          <button onClick={this.toggleModal}
+                  className={`c-button c-button--${this.props.buttonType} v-animation v-animation--${this.props.buttonAnimationType}`}>
+            {this.props.title}
           </button>
         }
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.toggleModal}
-          style={customStyles}
-          contentLabel='Tech Stack'
+          style={modalStyles}
+          contentLabel={this.props.title}
           overlayClassName='c-overlay v-animation v-animation--fade-in'>
           <button className='c-overlay__button' onClick={this.toggleModal}>
-            <span className='c-overlay__close js-overlay-close' />
+            <span className='c-overlay__close' />
           </button>
           {this.props.children}
         </Modal>
