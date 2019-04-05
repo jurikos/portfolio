@@ -45,8 +45,7 @@ class ModalOverlay extends Component {
           onRequestClose={this.toggleModal}
           style={customStyles}
           contentLabel='Tech Stack'
-          overlayClassName='c-overlay v-animation v-animation--fade-in'
-        >
+          overlayClassName='c-overlay v-animation v-animation--fade-in'>
           <button className='c-overlay__button' onClick={this.toggleModal}>
             <span className='c-overlay__close js-overlay-close' />
           </button>
