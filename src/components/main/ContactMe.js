@@ -4,8 +4,6 @@ import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
 const ContactMe = (props) => {
-  console.log(props);
-
   return (
     <ModalOverlay title='Contact Me' showButton={true} buttonAnimationType='slide-in-right'>
       <ul className='c-contacts v-animation v-animation--zoom-in'>
