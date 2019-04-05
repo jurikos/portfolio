@@ -8,6 +8,7 @@
         padding: $indent--l 0;
         border-top: .1rem solid $brand-color--primary;
         color: $brand-color--tertiary;
+        white-space: nowrap;
 
         .c-contacts__item:last-child & {
             border-bottom: .1rem solid $brand-color--primary;

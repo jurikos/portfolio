@@ -17,19 +17,16 @@
 
     &__col {
         flex-basis: 100%;
-        min-width: 100%;
         padding-top: $indent--l;
 
         @media #{$breakpoint--medium-above} {
             flex-basis: 50%;
-            min-width: 50%;
             padding-right: $indent--l;
             padding-left: $indent--l;
         }
 
         @media #{$breakpoint--large-above} {
-            flex-basis: 25%;
-            min-width: 25%;
+            flex-basis: 33.3%;
         }
     }
 

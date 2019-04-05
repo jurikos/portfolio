@@ -3,12 +3,14 @@
 /**** Logo ****/
 
 .c-logo {
+    display: none;
     margin: auto;
     width: 16rem;
     cursor: pointer;
     color: $logo-color;
 
     @media #{$breakpoint--medium-above} {
+        display: block;
         width: 32rem;
     }
 

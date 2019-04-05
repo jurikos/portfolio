@@ -68,7 +68,7 @@ class Main extends Component {
               <article className='c-content__txt v-animation v-animation--fade-in-up'
                        dangerouslySetInnerHTML={{ __html: content.summary }} />
               <div className='c-content__cta'>
-                <TechStack />
+                <TechStack data={content.techStack} />
                 <ContactMe data={content.contact} />
               </div>
             </React.Fragment>
