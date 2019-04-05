@@ -2,7 +2,6 @@ import React from 'react';
 
 import ModalOverlay from '../ModalOverlay';
 import Item from './tech-stack/Item';
-import Icon from '../Icon';
 
 const TechStack = (props) => {
   return (
