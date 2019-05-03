@@ -4,8 +4,8 @@ import ModalOverlay from '../ModalOverlay';
 import Icon from '../Icon';
 
 const Portfolio = (props) => {
-  const items = props.data.map((item) =>
-    <li key={item} className='c-portfolio__item'>
+  const items = props.data.map((item, i) =>
+    <li key={i} className='c-portfolio__item'>
       <h3 className='c-portfolio__title'>{item.title}</h3>
       {/* eslint-disable-next-line react/jsx-no-target-blank */}
       <a className='c-portfolio__link' href={item.url} target='_blank'>
@@ -15,7 +15,7 @@ const Portfolio = (props) => {
       <p className='c-portfolio__description' dangerouslySetInnerHTML={{ __html: item.summary }} />
       <h4 className='c-portfolio__sub-title'>Technology used</h4>
       <div className='c-portfolio__tech-stack'>
-        {item.technology.map((item) => <Icon name={item} />)}
+        {item.technology.map((item, i) => <Icon key={i} name={item} />)}
       </div>
     </li>
   );
