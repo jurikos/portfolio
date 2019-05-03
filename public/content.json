@@ -188,7 +188,58 @@
             }
         }
     },
-    "portfolio": {
-
-    }
+    "portfolio": [
+        {
+            "title": "Logistar Group Corporate Website",
+            "url": "https://www.logistar.ee",
+            "summary": "Corporate website built with headless CMS approach using React as frontend and WordPress as a backend. It also uses react-snap static pre-renderer for SEO purposes.",
+            "technology": [
+                "wordpress",
+                "php",
+                "webpack",
+                "react",
+                "html5",
+                "sass"
+            ]
+        },
+        {
+            "title": "HellyHansen eCommerce Website",
+            "url": "https://www.hellyhansen.com",
+            "summary": "eCommerce website for famous clothing brand built on Magento 2 platform.",
+            "technology": [
+                "magento",
+                "php",
+                "grunt",
+                "jquery",
+                "html5",
+                "less"
+            ]
+        },
+        {
+            "title": "Kaubamaja eCommerce Website",
+            "url": "https://www.kaubamaja.ee",
+            "summary": "eCommerce website for Estonia's oldest & largest department store built on Magento 1 platform.",
+            "technology": [
+                "magento",
+                "php",
+                "gulp",
+                "jquery",
+                "html5",
+                "sass"
+            ]
+        },
+        {
+            "title": "Selver eCommerce Website",
+            "url": "https://www.kaubamaja.ee",
+            "summary": " eCommerce website for Estonia's largest supermarkets & hypermarkets chain built on Magento 1 platform.",
+            "technology": [
+                "magento",
+                "php",
+                "gulp",
+                "jquery",
+                "html5",
+                "sass"
+            ]
+        }
+    ]
 }
