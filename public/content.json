@@ -35,7 +35,7 @@
                 "icon": "angular"
             },
             "ionic": {
-                "title": "Iconic",
+                "title": "Ionic",
                 "icon": "ionic"
             },
             "jquery": {
@@ -187,5 +187,8 @@
                 "icon": "confluence"
             }
         }
+    },
+    "portfolio": {
+
     }
 }

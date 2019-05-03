@@ -8,7 +8,7 @@ const TechStack = (props) => {
     <ModalOverlay title='Tech Stack' showButton={true} buttonType='secondary' buttonAnimationType='slide-in-left'>
       <div className='c-listing v-animation v-animation--zoom-in'>
         <div className='c-listing__col'>
-          <h2 className='c-listing__heading'>Javascript</h2>
+          <h2 className='c-listing__heading'>JavaScript</h2>
           <ul className='c-listing__list'>
             <Item data={props.data.javascript} />
           </ul>

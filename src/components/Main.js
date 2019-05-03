@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Loading from './Loading';
 import TechStack from './main/TechStack';
+import Portfolio from './main/Portfolio';
 import ContactMe from './main/ContactMe';
 
 class Main extends Component {
@@ -69,6 +70,7 @@ class Main extends Component {
                        dangerouslySetInnerHTML={{ __html: content.summary }} />
               <div className='c-content__cta'>
                 <TechStack data={content.techStack} />
+                <Portfolio data={content.portfolio} />
                 <ContactMe data={content.contact} />
               </div>
             </React.Fragment>
