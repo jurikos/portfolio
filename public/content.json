@@ -6,13 +6,13 @@
     },
     "techStack": {
         "javascript": {
-            "es5": {
-                "title": "ES5",
+            "es": {
+                "title": "ES6 - ES10",
                 "icon": "javascript"
             },
-            "es6": {
-                "title": "ES6",
-                "icon": "javascript"
+            "nodejs": {
+                "title": "Node.js",
+                "icon": "nodejs"
             },
             "react": {
                 "title": "React",
@@ -25,6 +25,10 @@
             "redux": {
                 "title": "Redux",
                 "icon": "redux"
+            },
+            "jest": {
+                "title": "Jest",
+                "icon": "jest"
             },
             "typescript": {
                 "title": "Typescript",
@@ -70,16 +74,8 @@
             }
         },
         "backend": {
-            "firebase": {
-                "title": "Firebase",
-                "icon": "google"
-            },
-            "magento2": {
-                "title": "Magento 2",
-                "icon": "magento"
-            },
-            "magento1": {
-                "title": "Magento 1",
+            "magento": {
+                "title": "Magento 1 - 2",
                 "icon": "magento"
             },
             "wordpress": {
@@ -89,6 +85,30 @@
             "php": {
                 "title": "PHP",
                 "icon": "php"
+            },
+            "python": {
+                "title": "Python",
+                "icon": "python"
+            },
+            "mysql": {
+                "title": "MySQL",
+                "icon": "mysql"
+            },
+            "mongodb": {
+                "title": "MongoDB",
+                "icon": "mongodb"
+            },
+            "firebase": {
+                "title": "Firebase",
+                "icon": "google"
+            },
+            "docker": {
+                "title": "Docker",
+                "icon": "docker"
+            },
+            "vagrant": {
+                "title": "Vagrant",
+                "icon": "vagrant"
             }
         },
         "builders": {
@@ -230,7 +250,7 @@
         },
         {
             "title": "Selver eCommerce Website",
-            "url": "https://www.kaubamaja.ee",
+            "url": "https://www.selver.ee",
             "summary": " eCommerce website for Estonia's largest supermarkets & hypermarkets chain built on Magento 1 platform.",
             "technology": [
                 "magento",
