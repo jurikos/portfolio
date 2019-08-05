@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {getSessionStorageItem, setSessionStorageItem} from '../helper/session-storage';
+import { getSessionStorageItem, setSessionStorageItem } from '../helper/session-storage';
 import { fetchDataAsync } from '../helper/fetch-data-async';
 import Loading from './common/Loading';
 import TechStack from './main/TechStack';
@@ -8,18 +8,31 @@ import ContactMe from './main/ContactMe';
 
 const Main = () => {
   const [content, setContent] = useState(null);
-  const dataUrl = '/content.json';
+  const dataUrl = {
+    live: 'https://jurikos.github.io/portfolio/content.json',
+    local: '/content.json',
+  };
 
   const setContentCache = (data) => {
     setContent(data);
-    setSessionStorageItem(dataUrl, JSON.stringify(data));
+    setSessionStorageItem('content', JSON.stringify(data));
   }
 
   useEffect(() => {
-    getSessionStorageItem(dataUrl) ?
-      setContent(JSON.parse(getSessionStorageItem(dataUrl))) :
-      fetchDataAsync(dataUrl).then(data => setContentCache(data)).catch(error => console.error(error));
-  },[]);
+    const cachedContent = getSessionStorageItem('content');
+
+    cachedContent ?
+      setContent(JSON.parse(cachedContent)) :
+      fetchDataAsync(dataUrl.live)
+        .then(data => setContentCache(data))
+        .catch(error => {
+          console.error(error);
+
+          fetchDataAsync(dataUrl.local)
+            .then(data => setContentCache(data))
+            .catch(error => console.error(error));
+        });
+  },[dataUrl.live, dataUrl.local]);
 
   return (
     <main className='l-main' data-role='main'>

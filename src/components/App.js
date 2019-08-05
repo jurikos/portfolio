@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {getIsTouch} from '../helper/is-touch';
+import { getIsTouch } from '../helper/is-touch';
 import VideoBackground from './VideoBackground';
 import Header from './Header';
 import Main from './Main';
