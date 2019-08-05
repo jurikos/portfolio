@@ -1,14 +1,12 @@
 import React from 'react';
-
 import ModalOverlay from '../ModalOverlay';
-import Icon from '../Icon';
+import Icon from '../common/Icon';
 
-const Portfolio = (props) => {
-  const items = props.data.map((item, i) =>
+const Portfolio = ({data}) => {
+  const items = data.map((item, i) =>
     <li key={i} className='c-portfolio__item'>
       <h3 className='c-portfolio__title'>{item.title}</h3>
-      {/* eslint-disable-next-line react/jsx-no-target-blank */}
-      <a className='c-portfolio__link' href={item.url} target='_blank'>
+      <a className='c-portfolio__link' href={item.url} target='_blank' rel='noopener noreferrer'>
         <span>{item.url.replace(/^https?:\/\//,'')}</span>
       </a>
       <h4 className='c-portfolio__sub-title'>Summary</h4>

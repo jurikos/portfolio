@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://jurikos.github.io/portfolio/",
   "dependencies": {
-    "gh-pages": "^2.0.1",
+    "gh-pages": "2.0.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

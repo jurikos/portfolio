@@ -1,6 +1,6 @@
 import React from 'react';
 
-const files = require.context('!svg-sprite-loader!../images/svg', false, /.*\.svg$/);
+const files = require.context('!svg-sprite-loader!../../images/svg', false, /.*\.svg$/);
 files.keys().forEach(files);
 
 const Icon = ({name, modifier}) => (

@@ -16,10 +16,6 @@
     z-index: 9999;
     animation: animation--fadein $transition-duration;
 
-    &.is-visible {
-        display: block;
-    }
-
     &__inner {
         height: 100vh;
         display: flex;
@@ -40,51 +36,6 @@
         @media #{$breakpoint--large-above} {
             margin: 0;
             padding: $indent--xl;
-        }
-    }
-
-    &__button {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    &__close {
-        position: absolute;
-        top: -$indent * 5;
-        right: 0;
-        width: 3rem;
-        height: 3rem;
-        cursor: pointer;
-
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -.1rem;
-            width: .2rem;
-            height: 100%;
-            background: $overlay-close-background;
-            transition: $transition-duration;
-        }
-
-        &:before {
-            transform: rotate(45deg)
-        }
-
-        &:after {
-            transform: rotate(-45deg)
-        }
-
-        &:hover {
-            .is-not-touch & {
-                &:before,
-                &:after {
-                    background: $overlay-close-background--hover;
-                }
-            }
         }
     }
 }
