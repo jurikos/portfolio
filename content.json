@@ -1,213 +1,240 @@
-{
+{   "title": "Frontend Developer",
     "summary": "<p>Senior <strong>Frontend Web &amp; Mobile</strong> developer with a strong focus on <strong>performance optimisation</strong>, <strong>clean code</strong> and passion to <strong>UX</strong>. I have 10 Years of professional experience developing high-end <strong>ecommerce</strong> &amp; <strong>corporate websites</strong>, cross-platform <strong>mobile apps</strong>.</p>",
     "contact": {
         "email": "juri.kostjunin@gmail.com",
         "linkedIn": "linkedin.com/in/jurikos"
     },
-    "techStack": {
-        "javascript": {
-            "es": {
-                "title": "ES6 - ES10",
-                "icon": "javascript"
-            },
-            "nodejs": {
-                "title": "Node.js",
-                "icon": "nodejs"
-            },
-            "react": {
-                "title": "React",
-                "icon": "react"
-            },
-            "react-native": {
-                "title": "React Native",
-                "icon": "react"
-            },
-            "redux": {
-                "title": "Redux",
-                "icon": "redux"
-            },
-            "jest": {
-                "title": "Jest",
-                "icon": "jest"
-            },
-            "typescript": {
-                "title": "Typescript",
-                "icon": "typescript"
-            },
-            "angular": {
-                "title": "Angular",
-                "icon": "angular"
-            },
-            "ionic": {
-                "title": "Ionic",
-                "icon": "ionic"
-            },
-            "jquery": {
-                "title": "jQquery",
-                "icon": "jquery"
-            }
+    "techStack": [
+        {
+            "title": "JavaScript",
+            "stack": [
+                {
+                    "title": "ES5 - ES10",
+                    "icon": "javascript"
+                },
+                {
+                    "title": "Node.js",
+                    "icon": "nodejs"
+                },
+                {
+                    "title": "React",
+                    "icon": "react"
+                },
+                {
+                    "title": "React Native",
+                    "icon": "react"
+                },
+                {
+                    "title": "Redux",
+                    "icon": "redux"
+                },
+                {
+                    "title": "Jest",
+                    "icon": "jest"
+                },
+                {
+                    "title": "Typescript",
+                    "icon": "typescript"
+                },
+                {
+                    "title": "Angular",
+                    "icon": "angular"
+                },
+                {
+                    "title": "Ionic",
+                    "icon": "ionic"
+                },
+                {
+                    "title": "jQquery",
+                    "icon": "jquery"
+                }
+            ]
         },
-        "frontend": {
-            "css": {
-                "title": "CSS",
-                "icon": "css"
-            },
-            "sass": {
-                "title": "SASS",
-                "icon": "sass"
-            },
-            "less": {
-                "title": "LESS",
-                "icon": "less"
-            },
-            "html": {
-                "title": "HTML5",
-                "icon": "html5"
-            },
-            "svg": {
-                "title": "SVG",
-                "icon": "svg"
-            },
-            "bem": {
-                "title": "BEM",
-                "icon": "bem"
-            }
+        {
+            "title": "Frontend",
+            "stack": [
+                {
+                    "title": "CSS",
+                    "icon": "css"
+                },
+                {
+                    "title": "SASS",
+                    "icon": "sass"
+                },
+                {
+                    "title": "LESS",
+                    "icon": "less"
+                },
+                {
+                    "title": "HTML5",
+                    "icon": "html5"
+                },
+                {
+                    "title": "SVG",
+                    "icon": "svg"
+                },
+                {
+                    "title": "BEM",
+                    "icon": "bem"
+                }
+            ]
         },
-        "backend": {
-            "magento": {
-                "title": "Magento 1 - 2",
-                "icon": "magento"
-            },
-            "wordpress": {
-                "title": "Wordpress",
-                "icon": "wordpress"
-            },
-            "php": {
-                "title": "PHP",
-                "icon": "php"
-            },
-            "python": {
-                "title": "Python",
-                "icon": "python"
-            },
-            "mysql": {
-                "title": "MySQL",
-                "icon": "mysql"
-            },
-            "mongodb": {
-                "title": "MongoDB",
-                "icon": "mongodb"
-            },
-            "firebase": {
-                "title": "Firebase",
-                "icon": "google"
-            },
-            "docker": {
-                "title": "Docker",
-                "icon": "docker"
-            },
-            "vagrant": {
-                "title": "Vagrant",
-                "icon": "vagrant"
-            }
+        {
+            "title": "CMS / Backend",
+            "stack": [
+                {
+                    "title": "Magento 1 - 2",
+                    "icon": "magento"
+                },
+                {
+                    "title": "Wordpress",
+                    "icon": "wordpress"
+                },
+                {
+                    "title": "PHP",
+                    "icon": "php"
+                },
+                {
+                    "title": "Python",
+                    "icon": "python"
+                },
+                {
+                    "title": "MySQL",
+                    "icon": "mysql"
+                },
+                {
+                    "title": "MongoDB",
+                    "icon": "mongodb"
+                },
+                {
+                    "title": "Firebase",
+                    "icon": "google"
+                },
+                {
+                    "title": "Docker",
+                    "icon": "docker"
+                },
+                {
+                    "title": "Vagrant",
+                    "icon": "vagrant"
+                }
+            ]
         },
-        "builders": {
-            "webpack": {
-                "title": "Webpack",
-                "icon": "webpack"
-            },
-            "gulp": {
-                "title": "Gulp",
-                "icon": "gulp"
-            },
-            "grunt": {
-                "title": "Grunt",
-                "icon": "grunt"
-            }
+        {
+            "title": "Builders",
+            "stack": [
+                {
+                    "title": "Webpack",
+                    "icon": "webpack"
+                },
+                {
+                    "title": "Gulp",
+                    "icon": "gulp"
+                },
+                {
+                    "title": "Grunt",
+                    "icon": "grunt"
+                }
+            ]
         },
-        "versionControl": {
-            "git": {
-                "title": "Git",
-                "icon": "git"
-            },
-            "mercurial": {
-                "title": "Mercurial",
-                "icon": "mercurial"
-            },
-            "github": {
-                "title": "GitHub",
-                "icon": "github"
-            },
-            "bitbucket": {
-                "title": "BitBucket",
-                "icon": "bitbucket"
-            },
-            "sourcetree": {
-                "title": "SourceTree",
-                "icon": "sourcetree"
-            }
+        {
+            "title": "Version Control",
+            "stack": [
+                {
+                    "title": "Git",
+                    "icon": "git"
+                },
+                {
+                    "title": "Mercurial",
+                    "icon": "mercurial"
+                },
+                {
+                    "title": "GitHub",
+                    "icon": "github"
+                },
+                {
+                    "title": "BitBucket",
+                    "icon": "bitbucket"
+                },
+                {
+                    "title": "SourceTree",
+                    "icon": "sourcetree"
+                }
+            ]
         },
-        "ux": {
-            "invision": {
-                "title": "InVision",
-                "icon": "invision"
-            },
-            "sketch": {
-                "title": "Sketch",
-                "icon": "sketch"
-            },
-            "photoshop": {
-                "title": "Photoshop",
-                "icon": "photoshop"
-            },
-            "illustrator": {
-                "title": "Illustrator",
-                "icon": "illustrator"
-            }
+        {
+            "title": "UX",
+            "stack": [
+                {
+                    "title": "InVision",
+                    "icon": "invision"
+                },
+                {
+                    "title": "Sketch",
+                    "icon": "sketch"
+                },
+                {
+                    "title": "Photoshop",
+                    "icon": "photoshop"
+                },
+                {
+                    "title": "Illustrator",
+                    "icon": "illustrator"
+                }
+            ]
         },
-        "optimisation": {
-            "security": {
-                "title": "Security",
-                "icon": "security"
-            },
-            "performance": {
-                "title": "Performance",
-                "icon": "performance"
-            },
-            "seo": {
-                "title": "SEO",
-                "icon": "google"
-            }
+        {
+            "title": "Optimisation",
+            "stack": [
+                {
+                    "title": "Security",
+                    "icon": "security"
+                },
+                {
+                    "title": "Performance",
+                    "icon": "performance"
+                },
+                {
+                    "title": "SEO",
+                    "icon": "google"
+                }
+            ]
         },
-        "methodologies": {
-            "agile": {
-                "title": "Agile",
-                "icon": "board"
-            },
-            "scrum": {
-                "title": "Scrum",
-                "icon": "tasks"
-            },
-            "kanban": {
-                "title": "Kanban",
-                "icon": "list"
-            }
+        {
+            "title": "Methodologies",
+            "stack": [
+                {
+                    "title": "Agile",
+                    "icon": "board"
+                },
+                {
+                    "title": "Scrum",
+                    "icon": "tasks"
+                },
+                {
+                    "title": "Kanban",
+                    "icon": "list"
+                }
+            ]
         },
-        "pm": {
-            "trello": {
-                "title": "Trello",
-                "icon": "trello"
-            },
-            "jira": {
-                "title": "Jira",
-                "icon": "jira"
-            },
-            "confluence": {
-                "title": "Confluence",
-                "icon": "confluence"
-            }
+        {
+            "title": "PM",
+            "stack": [
+                {
+                    "title": "Trello",
+                    "icon": "trello"
+                },
+                {
+                    "title": "Jira",
+                    "icon": "jira"
+                },
+                {
+                    "title": "Confluence",
+                    "icon": "confluence"
+                }
+            ]
         }
-    },
+    ],
     "portfolio": [
         {
             "title": "Logistar Group Corporate Website",
