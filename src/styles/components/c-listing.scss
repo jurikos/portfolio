@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Listing ****/
 
@@ -9,20 +9,20 @@
     color: $brand-color--tertiary;
 
     @media #{$breakpoint--large-above} {
-        margin-top: -$indent--l;
-        margin-right: -$indent--l;
-        margin-left: -$indent--l;
+        margin-top: -($indent * 2);
+        margin-right: -($indent * 2);
+        margin-left: -($indent * 2);
         width: 92rem;
     }
 
     &__col {
         flex-basis: 100%;
-        padding-top: $indent--l;
+        padding-top: ($indent * 2);
 
         @media #{$breakpoint--medium-above} {
             flex-basis: 50%;
-            padding-right: $indent--l;
-            padding-left: $indent--l;
+            padding-right: ($indent * 2);
+            padding-left: ($indent * 2);
         }
 
         @media #{$breakpoint--large-above} {
@@ -37,7 +37,7 @@
 
     &__heading {
         font-size: 2.4rem;
-        padding: $indent--l 0 0;
+        padding: ($indent * 2) 0 0;
         border-top: .1rem solid $listing-border-color;
     }
 }

@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import 'variables';
 
 /**** Reset ****/
 
@@ -9,7 +9,6 @@
 *,
 *::before,
 *::after {
-    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
@@ -23,12 +22,7 @@
     border: 0;
 }
 
-:focus {
-    outline: 0;
-}
-
 html {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     -ms-text-size-adjust: 100%;
@@ -41,16 +35,16 @@ body {
     margin: 0;
     font-family: $font-family;
     font-weight: $font-weight--normal;
-    font-size: 2rem;
+    font-size: $font-size--primary;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff;
+    background-color: $brand-color--tertiary;
     color: $body-color;
-    line-height: 1.5;
+    line-height: 1;
     overflow-x: hidden;
     display: flex;
     align-items: center;
-    width: 100%;
+    flex-basis: 100%;
     min-height: 100vh;
 
 }
@@ -60,9 +54,6 @@ h2,
 h3,
 h4,
 p,
-blockquote,
-figure,
-ol,
 ul {
     margin: 0;
     padding: 0;
@@ -120,19 +111,3 @@ svg:not(:root) {
 svg use {
     pointer-events: none
 }
-
-@import 'h-helper.scss';
-@import 'l-layout.scss';
-@import 'c-icon.scss';
-@import 'c-loading.scss';
-@import 'c-overlay.scss';
-
-@import 'c-logo.scss';
-@import 'c-videobg.scss';
-@import 'c-content.scss';
-@import 'c-button.scss';
-@import 'c-listing.scss';
-@import 'c-portfolio.scss';
-@import 'c-contacts.scss';
-
-@import 'v-animation.scss';

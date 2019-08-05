@@ -1,12 +1,12 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Button ****/
 
 .c-button {
     @include ios-reset();
     position: relative;
-    margin: $indent--l 0 0;
-    padding: $indent--l $indent--xl;
+    margin: ($indent * 2) 0 0;
+    padding: ($indent * 2) ($indent * 4);
     display: block;
     width: 100%;
     flex-basis: 100%;
@@ -20,7 +20,7 @@
     transition: $transition-duration;
 
     @media #{$breakpoint--medium-above} {
-        margin: $indent--l $indent--l 0 $indent--l;
+        margin: ($indent * 2) ($indent * 2) 0 ($indent * 2);
         width: auto;
         flex-basis: auto;
     }

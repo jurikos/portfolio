@@ -1,11 +1,11 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Contacts ****/
 
 .c-contacts {
     &__link {
         display: block;
-        padding: $indent--l 0;
+        padding: ($indent * 2) 0;
         border-top: .1rem solid $brand-color--primary;
         color: $brand-color--tertiary;
         white-space: nowrap;
@@ -25,7 +25,7 @@
 
     .c-icon {
         top: -.2rem;
-        margin-right: $indent--l;
+        margin-right: ($indent * 2);
         width: 2.4rem;
         height: 2.4rem;
         transition: $transition-duration;

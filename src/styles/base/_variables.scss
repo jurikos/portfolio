@@ -1,5 +1,5 @@
-@import '_colors.scss';
-@import '_mixins.scss';
+@import 'colors';
+@import 'mixins';
 
 /**** Breakpoints ****/
 
@@ -17,23 +17,20 @@ $golden-ratio: 1.618;
 $font-family: 'Titillium Web', sans-serif;
 $font-family--alternate: 'Cutive Mono', monospace;
 
+$font-size--primary: 2rem;
+
 $font-weight--normal: 400;
 $font-weight--bold: 700;
 
 /**** Indent ****/
 
 $indent: .8rem; // 8px
-$indent--l: $indent * 2; // 16px
-$indent--xl: $indent--l * 2; // 32px
 
 /**** Transitions ****/
 
 $transition-duration: .2s;
 
 /**** Layout ****/
-
-$layout-padding: $indent--l;
-$layout-padding--large: $indent--xl;
 
 $layout-width--large: 102.4rem;
 $layout-width--x-large: 180rem;

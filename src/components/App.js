@@ -3,7 +3,7 @@ import { getIsTouch } from '../helper/is-touch';
 import VideoBackground from './VideoBackground';
 import Header from './Header';
 import Main from './Main';
-import '../styles/global.scss';
+import '../styles/styles.scss';
 
 const App = () => {
   useEffect(() => {

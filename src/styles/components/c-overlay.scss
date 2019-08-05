@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Overlay ****/
 
@@ -25,8 +25,8 @@
     }
 
     &__content {
-        margin: 0 $indent--l;
-        padding: $indent--l;
+        margin: 0 ($indent * 2);
+        padding: ($indent * 2);
         max-height: 80vh;
         background: $overlay-content-background;
         border-radius: .3rem;
@@ -35,7 +35,7 @@
 
         @media #{$breakpoint--large-above} {
             margin: 0;
-            padding: $indent--xl;
+            padding: ($indent * 4);
         }
     }
 }

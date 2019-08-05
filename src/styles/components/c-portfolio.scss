@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Portfolio ****/
 
@@ -7,8 +7,8 @@
     line-height: $golden-ratio;
 
     &__item {
-        margin: $indent--l 0 0;
-        padding: $indent--l 0 0;
+        margin: ($indent * 2) 0 0;
+        padding: ($indent * 2) 0 0;
         border-top: .1rem solid $listing-border-color;
 
         &:first-child {
@@ -31,7 +31,7 @@
     }
 
     &__sub-title {
-        margin: $indent--l 0 0;
+        margin: ($indent * 2) 0 0;
     }
 
     &__description {

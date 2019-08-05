@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Content ****/
 
@@ -20,7 +20,7 @@
         -webkit-text-fill-color: transparent;
 
         @media #{$breakpoint--medium-above} {
-            padding: $indent--xl 0 $indent--l;
+            padding: ($indent * 4) 0 ($indent * 2);
             font-size: 8rem;
         }
 
@@ -54,7 +54,7 @@
         flex-basis: 100%;
         order: 2;
         margin: auto;
-        padding: $indent--xl 0 0;
+        padding: ($indent * 4) 0 0;
 
         @media #{$breakpoint--medium-above} {
             order: 1;
@@ -72,7 +72,7 @@
     &__cta {
         flex-basis: 100%;
         order: 1;
-        padding: $indent--xl 0 0;
+        padding: ($indent * 4) 0 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

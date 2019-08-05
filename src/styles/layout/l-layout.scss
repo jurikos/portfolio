@@ -1,10 +1,9 @@
-@import '_variables.scss';
+@import '../base/variables';
 
 /**** Layout ****/
 
 %fullwidth {
     flex-basis: 100%;
-    min-width: 100%;
 }
 
 .l-container {
@@ -12,11 +11,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding: $layout-padding;
+    padding: ($indent * 2);
 
     @media #{$breakpoint--large-above} {
         margin: auto;
-        padding: $layout-padding--large;
+        padding: ($indent * 4);
         max-width: $layout-width--large;
     }
 
