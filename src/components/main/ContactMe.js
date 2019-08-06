@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalOverlay from '../ModalOverlay';
+import ModalOverlay from '../common/ModalOverlay';
 import Icon from '../common/Icon';
 
 const ContactMe = ({email, linkedIn}) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalOverlay from '../ModalOverlay';
+import ModalOverlay from '../common/ModalOverlay';
 import Icon from '../common/Icon';
 
 const Portfolio = ({data}) => {
@@ -19,7 +19,7 @@ const Portfolio = ({data}) => {
   );
 
   return (
-    <ModalOverlay title='Portfolio' showButton={true} buttonAnimationType='slide-in-right'>
+    <ModalOverlay title='Portfolio' showButton={true} buttonAnimationType='slide-in-up'>
       <ul className='c-portfolio'>
         {items}
       </ul>

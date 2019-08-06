@@ -111,3 +111,9 @@ svg:not(:root) {
 svg use {
     pointer-events: none
 }
+
+/**** Root ***/
+
+#root {
+    flex-basis: 100%;
+}
