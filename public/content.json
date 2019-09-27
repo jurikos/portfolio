@@ -76,6 +76,10 @@
                 {
                     "title": "BEM",
                     "icon": "bem"
+                },
+                {
+                    "title": "Bootstrap",
+                    "icon": "bootstrap"
                 }
             ]
         },
@@ -236,6 +240,28 @@
         }
     ],
     "portfolio": [
+        {
+            "title": "Token Web APP",
+            "url": "https://www.token.ee",
+            "summary": "Cryptocurrency analytical web app built with React and Redux for global state management. Historical data is visualized with Chart.js. Current MVP version is developed with React Bootstrap. It also uses react-snap static pre-renderer for SEO purposes.",
+            "technology": [
+                "react",
+                "redux",
+                "bootstrap",
+                "html5",
+                "sass"
+            ]
+        },
+        {
+            "title": "Onpolar Corporate Website",
+            "url": "https://www.onpolar.com",
+            "summary": "Corporate website build with React and Context API for global state management. It also uses react-snap static pre-renderer for SEO purposes.",
+            "technology": [
+                "react",
+                "html5",
+                "sass"
+            ]
+        },
         {
             "title": "Logistar Group Corporate Website",
             "url": "https://www.logistar.ee",

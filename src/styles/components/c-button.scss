@@ -18,6 +18,7 @@
     border: .2rem solid transparent;
     border-radius: .3rem;
     transition: $transition-duration;
+    overflow: hidden;
 
     @media #{$breakpoint--medium-above} {
         margin: ($indent * 2) ($indent * 2) 0 ($indent * 2);
@@ -63,4 +64,30 @@
             }
         }
     }
+
+    &__inner {
+        &:after {
+            opacity: 0;
+            content: '';
+            position: absolute;
+            bottom: -($indent / 2);
+            left: 0;
+            width: $indent * 3;
+            height: $indent / 3;
+            background: $brand-color--tertiary;
+            transform: scaleX(.5);
+            transform-origin: -80%;
+            transition: ($transition-duration * 2);
+        }
+
+        .is-not-touch .c-button:hover & {
+            position: relative;
+
+            &:after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+    }
+
 }

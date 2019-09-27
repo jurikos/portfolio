@@ -25,7 +25,7 @@ const ModalOverlay = ({title, showButton, buttonType, buttonAnimationType, child
       { showButton &&
         <button onClick={() => setModalIsOpen(!modalIsOpen)}
                 className={`c-button c-button--${buttonType ? buttonType : 'primary'} v-animation v-animation--${buttonAnimationType}`}>
-          {title}
+          <span className='c-button__inner'>{title}</span>
         </button>
       }
       <Modal
