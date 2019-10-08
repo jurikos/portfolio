@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { createUseStyles } from 'react-jss';
 
 Modal.setAppElement('#root');
 
@@ -19,6 +20,7 @@ const ModalOverlay = ({title, showButton, buttonType, buttonAnimationType, child
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const classes = useStyles();
 
   return (
     <>
@@ -33,11 +35,32 @@ const ModalOverlay = ({title, showButton, buttonType, buttonAnimationType, child
         onRequestClose={() => setModalIsOpen(!modalIsOpen)}
         style={modalStyles}
         contentLabel={title}
-        overlayClassName='c-overlay v-animation v-animation--fade-in'>
+        overlayClassName={classes.overlay}>
         {children}
       </Modal>
     </>
   );
-}
+};
+
+const useStyles = createUseStyles(theme => ({
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    background: 'rgba(0, 0, 0, .8)',
+    zIndex: 9999,
+    animation: `$fadeIn .5s both`
+  },
+  '@keyframes fadeIn': {
+    'from': {
+      opacity: 0
+    },
+    'to': {
+      opacity: 1
+    }
+  },
+}));
 
 export default ModalOverlay;
