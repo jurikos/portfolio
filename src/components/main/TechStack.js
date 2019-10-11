@@ -23,7 +23,7 @@ const TechStack = ({data}) => {
 
   return (
     <ModalOverlay title='Tech Stack' showButton={true} buttonType='secondary' buttonAnimationType='slide-in-left'>
-      <div className={`${classes.listing} v-animation v-animation--zoom-in`}>
+      <div className={`${classes.listing}`}>
         {listStack}
       </div>
     </ModalOverlay>
@@ -35,39 +35,49 @@ const useStyles = createUseStyles(theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     lineHeight: theme.goldenRatio,
-    color: theme.colors.tertiary
+    color: theme.colors.tertiary,
+    animation: '$zoomIn .5s both'
   },
   column: {
     flexBasis: '100%',
-    paddingTop: `${theme.indent * 2 }rem`
+    paddingTop: `${theme.indent * 2}rem`
   },
   title: {
-    padding: `${theme.indent * 2 }rem 0 0`,
+    padding: `${theme.indent * 2}rem 0 0`,
     fontSize: '2.4rem',
     borderTop: `.1rem solid ${theme.colors.primary}`
   },
   list: {
-    padding: `${theme.indent * 2 }rem 0 0`,
+    padding: `${theme.indent * 2}rem 0 0`,
     fontFamily: theme.font.family.secondary
   },
   [`@media (min-width: ${theme.breakpoints.medium})`]: {
     column: {
       flexBasis: '50%',
-      paddingRight: `${theme.indent * 2 }rem`,
-      paddingLeft: `${theme.indent * 2 }rem`,
+      paddingRight: `${theme.indent * 2}rem`,
+      paddingLeft: `${theme.indent * 2}rem`,
     }
   },
   [`@media (min-width: ${theme.breakpoints.large})`]: {
     listing: {
-      marginTop: `-${theme.indent * 2 }rem`,
-      marginRight: `-${theme.indent * 2 }rem`,
-      marginLeft: `-${theme.indent * 2 }rem`,
+      marginTop: `-${theme.indent * 2}rem`,
+      marginRight: `-${theme.indent * 2}rem`,
+      marginLeft: `-${theme.indent * 2}rem`,
       width: '92rem'
     },
     column: {
       flexBasis: '33.3%'
     }
   },
+  '@keyframes zoomIn': {
+    'from': {
+      opacity: 0,
+      transform: 'scale3d(.3, .3, .3)'
+    },
+    '50%': {
+      opacity: 1
+    }
+  }
 }));
 
 

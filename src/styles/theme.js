@@ -6,7 +6,8 @@ export const theme = {
   },
   breakpoints: {
     medium: '768px',
-    large: '992px'
+    large: '992px',
+    huge: '1200px'
   },
   layout: {
     min: '1024px',

@@ -8,7 +8,7 @@ const ContactMe = ({email, linkedIn}) => {
 
   return (
     <ModalOverlay title='Contact Me' showButton={true} buttonType='secondary' buttonAnimationType='slide-in-right'>
-      <ul className='v-animation v-animation--zoom-in'>
+      <ul className={classes.list}>
         <li>
           <a className={classes.link} href={`mailto:${email}`}>
             <Icon name='envelope' modifier={classes.icon} />
@@ -27,6 +27,9 @@ const ContactMe = ({email, linkedIn}) => {
 };
 
 const useStyles = createUseStyles(theme => ({
+  list: {
+    animation: '$zoomIn .5s both',
+  },
   link: {
     display: 'block',
     padding: `${theme.indent * 2}rem 0`,
@@ -51,6 +54,15 @@ const useStyles = createUseStyles(theme => ({
   },
   iconLinkedIn: {
     top: `-${theme.indent / 2}rem`,
+  },
+  '@keyframes zoomIn': {
+    'from': {
+      opacity: 0,
+      transform: 'scale3d(.3, .3, .3)'
+    },
+    '50%': {
+      opacity: 1
+    }
   }
 }));
 

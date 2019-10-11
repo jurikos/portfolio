@@ -62,7 +62,7 @@ const useStyles = createUseStyles(theme => ({
     margin: `${theme.indent}rem ${theme.indent}rem 0 0`,
     width: '2.4rem',
     height: '2.4rem'
-  }
+  },
 }));
 
 export default Portfolio;

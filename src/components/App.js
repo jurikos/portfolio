@@ -1,28 +1,31 @@
 import React, { useEffect } from 'react';
+import { createUseStyles} from 'react-jss';
 import { getIsTouch } from '../helper/is-touch';
-import { JssProvider, ThemeProvider } from 'react-jss';
 import VideoBackground from './VideoBackground';
+import LayoutContainer from './common/layout/Container';
 import Header from './Header';
 import Main from './Main';
-import { theme } from '../styles/theme.js';
-import '../styles/styles.scss';
+import { reset } from '../styles/reset';
 
 const App = () => {
   useEffect(() => {
     getIsTouch() ? document.body.classList.add('is-touch') :  document.body.classList.add('is-not-touch');
   },[]);
+  useStyles();
 
   return (
-    <JssProvider id={{minify: true}}>
-      <ThemeProvider theme={theme}>
-        <VideoBackground />
-        <div className='l-container'>
-          <Header />
-          <Main />
-        </div>
-      </ThemeProvider>
-    </JssProvider>
+    <>
+      <VideoBackground />
+      <LayoutContainer>
+        <Header />
+        <Main />
+      </LayoutContainer>
+    </>
   );
 }
+
+const useStyles = createUseStyles({
+  '@global': reset
+});
 
 export default App;
