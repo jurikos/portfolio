@@ -58,6 +58,7 @@ export const reset = {
     margin: 0,
   },
   'ul': {
+    padding: 0,
     listStyleType: 'none'
   },
   'a, button': {

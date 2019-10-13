@@ -28,12 +28,13 @@ const ContactMe = ({email, linkedIn}) => {
 
 const useStyles = createUseStyles(theme => ({
   list: {
+    borderTop: `.1rem solid ${theme.colors.primary}`,
     animation: '$zoomIn .5s both',
   },
   link: {
     display: 'block',
     padding: `${theme.indent * 2}rem 0`,
-    borderTop: `.1rem solid ${theme.colors.primary}`,
+    borderBottom: `.1rem solid ${theme.colors.primary}`,
     color: theme.colors.tertiary,
     whiteSpace: 'nowrap',
     '&:hover svg': {
