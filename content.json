@@ -58,6 +58,10 @@
                     "icon": "css"
                 },
                 {
+                    "title": "JSS - CSS in JS",
+                    "icon": "javascript"
+                },
+                {
                     "title": "SASS",
                     "icon": "sass"
                 },
