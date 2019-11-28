@@ -88,7 +88,7 @@
             ]
         },
         {
-            "title": "CMS / Backend",
+            "title": "CMS / Backend / DevOps",
             "stack": [
                 {
                     "title": "Magento 1 - 2",
@@ -113,6 +113,10 @@
                 {
                     "title": "MongoDB",
                     "icon": "mongodb"
+                },
+                {
+                    "title": "AWS",
+                    "icon": "aws"
                 },
                 {
                     "title": "Firebase",
