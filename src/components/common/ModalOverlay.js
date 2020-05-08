@@ -1,49 +1,12 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import c from 'color';
 import { createUseStyles } from 'react-jss';
 
 Modal.setAppElement('#root');
 
-const ModalOverlay = ({title, showButton, buttonType, buttonAnimationType, children}) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const classes = useStyles();
-
-  const modalStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      padding: '2.4rem',
-      maxWidth: '80%',
-      maxHeight: '90%',
-      transform: 'translate(-50%, -50%)'
-    }
-  };
-
-  return (
-    <>
-      {showButton &&
-        <button onClick={() => setModalIsOpen(!modalIsOpen)}
-                className={`${classes.button} ${buttonType === 'secondary' ? classes.buttonSecondary : classes.buttonPrimary} ${classes.animation} ${classes.animationSlideInLeft}`}>
-          <span className={classes.buttonInner}>{title}</span>
-        </button>
-      }
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(!modalIsOpen)}
-        style={modalStyles}
-        contentLabel={title}
-        overlayClassName={classes.overlay}>
-        {children}
-      </Modal>
-    </>
-  );
-};
-
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme) => ({
   overlay: {
     position: 'fixed',
     top: 0,
@@ -52,7 +15,7 @@ const useStyles = createUseStyles(theme => ({
     height: '100%',
     background: 'rgba(0, 0, 0, .8)',
     zIndex: 9999,
-    animation: `$fadeIn .5s both`
+    animation: '$fadeIn .5s both',
   },
   button: {
     '-webkit-appearance': 'none',
@@ -78,10 +41,10 @@ const useStyles = createUseStyles(theme => ({
     color: theme.colors.tertiary,
     '&:hover': {
       '.is-not-touch &': {
-        background: c(theme.colors.primary).lighten(.3).hex(),
-        borderColor: c(theme.colors.primary).lighten(.3).hex()
-      }
-    }
+        background: c(theme.colors.primary).lighten(0.3).hex(),
+        borderColor: c(theme.colors.primary).lighten(0.3).hex(),
+      },
+    },
   },
   buttonSecondary: {
     borderColor: theme.colors.secondary,
@@ -100,66 +63,123 @@ const useStyles = createUseStyles(theme => ({
       '.is-not-touch &': {
         color: theme.colors.tertiary,
         '&:after': {
-          height: '100%'
-        }
-      }
-    }
+          height: '100%',
+        },
+      },
+    },
   },
   animation: {
     animationDuration: '1s',
-    animationFillMode: 'both'
+    animationFillMode: 'both',
   },
   animationSlideInUp: {
-    animationName: '$slideInUp'
+    animationName: '$slideInUp',
   },
   animationSlideInRight: {
-    animationName: '$slideInRight'
+    animationName: '$slideInRight',
   },
   animationSlideInLeft: {
-    animationName: '$slideInLeft'
+    animationName: '$slideInLeft',
   },
   [`@media (min-width: ${theme.breakpoints.medium})`]: {
     button: {
       margin: `${theme.indent * 2}rem ${theme.indent * 2}rem 0 ${theme.indent * 2}rem`,
       width: 'auto',
-      flexBasis: 'auto'
-    }
+      flexBasis: 'auto',
+    },
   },
   '@keyframes fadeIn': {
-    'from': {
-      opacity: 0
+    from: {
+      opacity: 0,
     },
-    'to': {
-      opacity: 1
-    }
+    to: {
+      opacity: 1,
+    },
   },
   '@keyframes slideInUp': {
-    'from': {
+    from: {
       transform: 'translate3d(0, 100%, 0)',
-      visibility: 'visible'
+      visibility: 'visible',
     },
-    'to': {
+    to: {
       transform: 'translate3d(0, 0, 0)',
-    }
+    },
   },
   '@keyframes slideInRight': {
-    'from': {
+    from: {
       transform: 'translate3d(100%, 0, 0)',
-      visibility: 'visible'
+      visibility: 'visible',
     },
-    'to': {
-      transform: 'translate3d(0, 0, 0)'
-    }
+    to: {
+      transform: 'translate3d(0, 0, 0)',
+    },
   },
   '@keyframes slideInLeft': {
-    'from': {
+    from: {
       transform: 'translate3d(-100%, 0, 0)',
-      visibility: 'visible'
+      visibility: 'visible',
     },
-    'to': {
-      transform: 'translate3d(0, 0, 0)'
-    }
-  }
+    to: {
+      transform: 'translate3d(0, 0, 0)',
+    },
+  },
 }));
+
+const ModalOverlay = ({
+  title, showButton, buttonType, children,
+}) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const classes = useStyles();
+
+  const modalStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      padding: '2.4rem',
+      maxWidth: '80%',
+      maxHeight: '90%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+  return (
+    <>
+      {showButton
+        && (
+        <button
+          type="button"
+          onClick={() => setModalIsOpen(!modalIsOpen)}
+          className={`${classes.button} ${buttonType === 'secondary' ? classes.buttonSecondary : classes.buttonPrimary} ${classes.animation} ${classes.animationSlideInLeft}`}
+        >
+          <span className={classes.buttonInner}>{title}</span>
+        </button>
+        )}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(!modalIsOpen)}
+        style={modalStyles}
+        contentLabel={title}
+        overlayClassName={classes.overlay}
+      >
+        {children}
+      </Modal>
+    </>
+  );
+};
+
+ModalOverlay.propTypes = {
+  title: PropTypes.string.isRequired,
+  showButton: PropTypes.bool,
+  buttonType: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+ModalOverlay.defaultProps = {
+  showButton: false,
+  buttonType: '',
+};
 
 export default ModalOverlay;

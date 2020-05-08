@@ -1,4 +1,4 @@
-export const theme = {
+const theme = {
   colors: {
     primary: '#ffd700',
     secondary: '#fff',
@@ -7,26 +7,28 @@ export const theme = {
   breakpoints: {
     medium: '768px',
     large: '992px',
-    huge: '1200px'
+    huge: '1200px',
   },
   layout: {
     min: '1024px',
-    max: '1800px'
+    max: '1800px',
   },
-  indent: .8,
+  indent: 0.8,
   goldenRatio: 1.618,
   font: {
     family: {
       primary: 'Titillium Web, sans-serif',
-      secondary: 'Cutive Mono, monospace'
+      secondary: 'Cutive Mono, monospace',
     },
     size: {
-      primary: '2rem'
+      primary: '2rem',
     },
     weight: {
       normal: 400,
-      bold: 700
-    }
+      bold: 700,
+    },
   },
-  transitionDuration: '.2s'
+  transitionDuration: '.2s',
 };
+
+export default theme;
