@@ -17,6 +17,10 @@
                     "icon": "nodejs"
                 },
                 {
+                    "title": "Express.js",
+                    "icon": "express"
+                },
+                {
                     "title": "React",
                     "icon": "react"
                 },
@@ -84,6 +88,10 @@
                 {
                     "title": "Bootstrap",
                     "icon": "bootstrap"
+                },
+                {
+                    "title": "Material UI",
+                    "icon": "google"
                 }
             ]
         },
@@ -249,6 +257,18 @@
     ],
     "portfolio": [
         {
+            "title": "Doctor Web APP",
+            "url": "https://www.doctor.ee",
+            "summary": "COVID-19 global info web app built with React and Next.js. Current MVP version is developed with Material UI. Running on Node.js / Express.js for server-side rendering and api proxying.",
+            "technology": [
+                "react",
+                "nodejs",
+                "express",
+                "google",
+                "html5"
+            ]
+        },
+        {
             "title": "Token Web APP",
             "url": "https://www.token.ee",
             "summary": "Cryptocurrency analytical web app built with React and Redux for global state management. Historical data is visualized with Chart.js. Current MVP version is developed with React Bootstrap. It also uses react-snap static pre-renderer for SEO purposes.",
@@ -257,6 +277,16 @@
                 "redux",
                 "bootstrap",
                 "html5",
+                "sass"
+            ]
+        },
+        {
+            "title": "Domain24 Web APP",
+            "url": "https://www.domain24.ee",
+            "summary": "Domains for sale web app built with React and Node.js. Puppeteer scrapes ajax content from SEDO.com user's portfolio page and generates .json file which is used to list domains on React APP.",
+            "technology": [
+                "react",
+                "nodejs",
                 "sass"
             ]
         },
