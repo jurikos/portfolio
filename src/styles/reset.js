@@ -1,28 +1,28 @@
-import { theme } from './theme';
+import theme from './theme';
 
-export const reset = {
+const reset = {
   '@-ms-viewport': {
-    width: 'device-width'
+    width: 'device-width',
   },
   '*': {
     boxSizing: 'inherit',
     '&:before': {
-      boxSizing: 'inherit'
+      boxSizing: 'inherit',
     },
     '&:after': {
-      boxSizing: 'inherit'
+      boxSizing: 'inherit',
     },
     '&:focus': {
-      outline: 'none'
+      outline: 'none',
     },
   },
   '::selection': {
     background: theme.colors.primary,
-    color: theme.colors.secondary
+    color: theme.colors.secondary,
   },
   '::-moz-focus-inner': {
     padding: 0,
-    border: 0
+    border: 0,
   },
   html: {
     boxSizing: 'border-box',
@@ -30,7 +30,7 @@ export const reset = {
     '-ms-text-size-adjust': '100%',
     '-webkit-text-size-adjust': '100%',
     fontSize: '62.5%',
-    lineHeight: 1.15
+    lineHeight: 1.15,
   },
   body: {
     margin: 0,
@@ -52,22 +52,22 @@ export const reset = {
     margin: 0,
   },
   'h1, h2': {
-    fontWeight: theme.font.weight.bold
+    fontWeight: theme.font.weight.bold,
   },
   'p, ul': {
     margin: 0,
   },
-  'ul': {
+  ul: {
     padding: 0,
-    listStyleType: 'none'
+    listStyleType: 'none',
   },
   'a, button': {
     color: 'inherit',
     cursor: 'pointer',
-    transition: theme.transitionDuration
+    transition: theme.transitionDuration,
   },
   a: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   button: {
     overflow: 'visible',
@@ -75,12 +75,12 @@ export const reset = {
     color: 'inherit',
     '-webkit-font-smoothing': 'inherit',
     letterSpacing: 'inherit',
-    background: 'none'
+    background: 'none',
   },
   img: {
     maxWidth: '100%',
     height: 'auto',
-    border: 0
+    border: 0,
   },
   svg: {
     margin: 'auto',
@@ -89,13 +89,15 @@ export const reset = {
     fill: 'currentColor',
     stroke: 'currentColor',
     '&:not(:root)': {
-      overflow: 'hidden'
-    }
+      overflow: 'hidden',
+    },
   },
   use: {
-    pointerEvents: 'none'
+    pointerEvents: 'none',
   },
   '#root': {
-    flexBasis: '100%'
-  }
+    flexBasis: '100%',
+  },
 };
+
+export default reset;

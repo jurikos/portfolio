@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { JssProvider, ThemeProvider} from 'react-jss';
+import { JssProvider, ThemeProvider } from 'react-jss';
 import App from './components/App';
+import theme from './styles/theme';
 import * as serviceWorker from './serviceWorker';
-import { theme } from './styles/theme';
 
 ReactDOM.render(
-  <JssProvider id={{minify: true}}>
+  <JssProvider id={{ minify: true }}>
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
   </JssProvider>,
-  document.getElementById('root'));
+  document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
