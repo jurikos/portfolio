@@ -281,16 +281,6 @@
             ]
         },
         {
-            "title": "Domain24 Web APP",
-            "url": "https://www.domain24.ee",
-            "summary": "Domains for sale web app built with React and Node.js. Puppeteer scrapes ajax content from SEDO.com user's portfolio page and generates .json file which is used to list domains on React APP.",
-            "technology": [
-                "react",
-                "nodejs",
-                "sass"
-            ]
-        },
-        {
             "title": "Onpolar Corporate Website",
             "url": "https://www.onpolar.com",
             "summary": "Corporate website build with React and Context API for global state management. It also uses react-snap static pre-renderer for SEO purposes.",
